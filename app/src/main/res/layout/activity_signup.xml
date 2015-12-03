@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itos.ilawyer.signup"
+    android:background="@drawable/bg">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Emailtext"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="198dp"
+        android:hint="Email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/Passwordtext"
+        android:layout_below="@+id/Emailtext"
+        android:layout_centerHorizontal="true"
+        android:hint="Password" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/Confirmtext"
+        android:layout_below="@+id/Passwordtext"
+        android:layout_centerHorizontal="true"
+        android:hint="Confirm Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registerThai"
+        android:id="@+id/Registerbutton"
+        android:layout_below="@+id/Confirmtext"
+        android:layout_alignLeft="@+id/Confirmtext"
+        android:layout_alignStart="@+id/Confirmtext"
+        android:layout_marginTop="39dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorThai"
+        android:background="@color/colorButton"
+        android:layout_alignRight="@+id/Confirmtext"
+        android:layout_alignEnd="@+id/Confirmtext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="มีบัญชีผู้ใช้งานแล้ว? Login ที่นี้"
+        android:id="@+id/textView"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/colorThai"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

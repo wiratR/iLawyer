@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itos.ilawyer.MainActivity"
+    android:background="@drawable/bg"
+    android:touchscreenBlocksFocus="false"
+    android:transitionGroup="false">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/PasswordText"
+        android:hint="Password"
+        android:textSize="@dimen/h1"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/EmailText"
+        android:layout_alignStart="@+id/EmailText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/EmailText"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/PasswordText"
+        android:layout_centerHorizontal="true"
+        android:hint="Email"
+        android:textSize="@dimen/h1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/ForgotpassText"
+        android:layout_marginTop="26dp"
+        android:typeface="serif"
+        android:text="ลืม? Password"
+        android:textColor="@color/colorThai"
+        android:layout_below="@+id/PasswordText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/Loginbutton"
+        android:background="@color/colorButton"
+        android:layout_below="@+id/ForgotpassText"
+        android:layout_marginTop="34dp"
+        android:textColor="@color/colorThai"
+        android:layout_alignRight="@+id/PasswordText"
+        android:layout_alignEnd="@+id/PasswordText"
+        android:layout_alignLeft="@+id/PasswordText"
+        android:layout_alignStart="@+id/PasswordText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/RegisterText"
+        android:typeface="serif"
+        android:text="ไม่มีบัญชีผู้ใช้งาน ลงทะเบียนทีนี้"
+        android:textColor="@color/colorThai"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp" />
+</RelativeLayout>
