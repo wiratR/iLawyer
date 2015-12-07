@@ -2,10 +2,12 @@ package itos.ilawyer;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private EditText userEditText,passwordEditText;
+    private TextView signUpTextView;
 
 
     @Override
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // initial Widget
         initialWidget();
         // Connected SQLite
-        //connetedSQLite(); //ทำ สำหรับเครื่องใหม่
+        connetedSQLite(); //ทำ สำหรับเครื่องใหม่
         /*
         final Button LoginButton = (Button) findViewById(R.id.Loginbutton);
         LoginButton.setOnClickListener(new View.OnClickListener() {
@@ -35,22 +38,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(menuPage);
             }
         }); // Click Login
-
-        final TextView RegisTextView = (TextView) findViewById(R.id.RegisterText);
-        RegisTextView.setOnClickListener(new View.OnClickListener() {
+        */
+      //  final TextView RegisTextView = (TextView) findViewById(R.id.RegisterText);
+        signUpTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent regisPage = new Intent(MainActivity.this, signup.class);
                 startActivity(regisPage);
             }
         }); // Click text Register
-        */
+
 
     } // Main Method
 
     private void initialWidget() {
         userEditText = (EditText) findViewById(R.id.EmailText);
         passwordEditText = (EditText) findViewById(R.id.PasswordText);
+        //passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
+
+        signUpTextView = (TextView) findViewById(R.id.RegisterText);
+
     }// Function InitialWidget()
 
     public void clickLogin(View view) {
@@ -91,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
             String[] strMyResult = objUserTABLE.searchUserPassword(strUser);
             if (strPassword.equals(strMyResult[2])) {
                 //Password True
-            } else {
                 welcomeDialog(strUser);
+
+            } else {
                 // Password Fail
                 errorDilog("Password False", "Please Try Again Password False");
             }

@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/registerThai"
         android:id="@+id/Registerbutton"
+        android:onClick="clickSignUp"
         android:layout_below="@+id/Confirmtext"
         android:layout_alignLeft="@+id/Confirmtext"
         android:layout_alignStart="@+id/Confirmtext"

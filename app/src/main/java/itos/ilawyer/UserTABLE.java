@@ -11,7 +11,8 @@ import android.database.sqlite.SQLiteDatabase;
 public class UserTABLE {
     // Explicit
     private MySQLiteOpenHelper objMySQLiteOpenHelper;
-    private SQLiteDatabase writeSqLiteDatabase, readSqLiteDatabase;
+    private SQLiteDatabase readSqLiteDatabase;
+    private SQLiteDatabase writeSqLiteDatabase;
 
     public static final String USER_TABLE = "USER_TB";
     public static final String COLUMN_ID_USER = "_id";
@@ -37,7 +38,8 @@ public class UserTABLE {
         try
         {
             String[] strResult = null;
-            Cursor objCursor = readSqLiteDatabase.query(USER_TABLE,new String[]{COLUMN_ID_USER,COLUMN_USER,COLUMN_PASSWORD,COLUMN_NAME},
+            Cursor objCursor = readSqLiteDatabase.query
+                    (USER_TABLE, new String[]{COLUMN_ID_USER,COLUMN_USER,COLUMN_PASSWORD,COLUMN_NAME},
                     COLUMN_USER + "=?",
                     new String[]{String.valueOf(strUser)},
                     null,null,null,null
@@ -51,10 +53,12 @@ public class UserTABLE {
                     strResult[3] = objCursor.getString(3);
                 }
             }
+           // objCursor.close();
+            return strResult;
         }catch (Exception e){
             return null;
         }
-        return new String[0];
+        //return new String[0];
     }// Functoion SerachUSERPassword
 
 
