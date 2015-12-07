@@ -4,5 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorThai">#FFFFFFFF</color>
-    <color name="colorButton">#102674</color>
+    <color name="colorButton">#1962AF</color>
+    <color name="colorActivetab">#69A6D5</color>
+    <color name="colorNoActivetab">#2E83C3</color>
+    <color name="colorDetail1">#6EA9D5</color>
+    <color name="colorDetail2">#F9AA8C</color>
 </resources>
