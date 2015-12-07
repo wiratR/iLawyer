@@ -14,6 +14,7 @@ public class UserTABLE {
     private SQLiteDatabase readSqLiteDatabase;
     private SQLiteDatabase writeSqLiteDatabase;
 
+
     public static final String USER_TABLE = "USER_TB";
     public static final String COLUMN_ID_USER = "_id";
     public static final String COLUMN_USER = "USER";
