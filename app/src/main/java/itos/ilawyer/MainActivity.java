@@ -113,12 +113,16 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder objBuilder = new AlertDialog.Builder(this);
         //objBuilder.setIcon()
         objBuilder.setTitle("Welcome");
-        objBuilder.setMessage("ยินดีต้อนรับ " + strName + "\n" + "สู้ระบบของเรา");
+        objBuilder.setMessage("ยินดีต้อนรับ " + strName + "\n" + "เข้าสู่ระบบ");
         objBuilder.setCancelable(false);
         objBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
-                dialogInterface.dismiss();
+               Intent objInent = new Intent(MainActivity.this,MenuTab.class); //
+               // Intent objInent = new Intent(MainActivity.this, tab_main.class);
+                startActivity(objInent);
+                finish();
+                //dialogInterface.dismiss();
             }
         });
         objBuilder.show();
